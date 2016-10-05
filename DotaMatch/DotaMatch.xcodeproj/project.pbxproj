@@ -12,9 +12,82 @@
 		27D549131DA43DB2008D1912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D549111DA43DB2008D1912 /* Main.storyboard */; };
 		27D549151DA43DB2008D1912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27D549141DA43DB2008D1912 /* Assets.xcassets */; };
 		27D549181DA43DB2008D1912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D549161DA43DB2008D1912 /* LaunchScreen.storyboard */; };
+		8DDFC628866810180AFBD2EA /* Pods_DotaMatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE22260BE9279355F7E8396 /* Pods_DotaMatch.framework */; };
+		C785F09C1DA44B77007A8E34 /* UserSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0501DA44B77007A8E34 /* UserSearchTableViewController.swift */; };
+		C785F09D1DA44B77007A8E34 /* UserSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0511DA44B77007A8E34 /* UserSearchTableViewCell.swift */; };
+		C785F09E1DA44B77007A8E34 /* UIColorFromHexExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0521DA44B77007A8E34 /* UIColorFromHexExtension.swift */; };
+		C785F0A01DA44B77007A8E34 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0541DA44B77007A8E34 /* MatchDetailsViewController.swift */; };
+		C785F0A11DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C785F0551DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.xib */; };
+		C785F0A21DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0561DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.swift */; };
+		C785F0A41DA44B77007A8E34 /* DotaMateApiResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0581DA44B77007A8E34 /* DotaMateApiResources.swift */; };
+		C785F0A51DA44B77007A8E34 /* DotaMateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0591DA44B77007A8E34 /* DotaMateApi.swift */; };
+		C785F0A61DA44B77007A8E34 /* DMXpT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F05A1DA44B77007A8E34 /* DMXpT.swift */; };
+		C785F0A81DA44B77007A8E34 /* DMXpPerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F05C1DA44B77007A8E34 /* DMXpPerMin.swift */; };
+		C785F0A91DA44B77007A8E34 /* DMTowerDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F05D1DA44B77007A8E34 /* DMTowerDamage.swift */; };
+		C785F0AA1DA44B77007A8E34 /* DMTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F05E1DA44B77007A8E34 /* DMTimes.swift */; };
+		C785F0AB1DA44B77007A8E34 /* DMTeamfights.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F05F1DA44B77007A8E34 /* DMTeamfights.swift */; };
+		C785F0AC1DA44B77007A8E34 /* DMSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0601DA44B77007A8E34 /* DMSpecific.swift */; };
+		C785F0AD1DA44B77007A8E34 /* DMSenLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0611DA44B77007A8E34 /* DMSenLog.swift */; };
+		C785F0AE1DA44B77007A8E34 /* DMSenLeftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0621DA44B77007A8E34 /* DMSenLeftLog.swift */; };
+		C785F0AF1DA44B77007A8E34 /* DMResultHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0631DA44B77007A8E34 /* DMResultHero.swift */; };
+		C785F0B01DA44B77007A8E34 /* DMResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0641DA44B77007A8E34 /* DMResult.swift */; };
+		C785F0B11DA44B77007A8E34 /* DMRecentMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0651DA44B77007A8E34 /* DMRecentMatch.swift */; };
+		C785F0B21DA44B77007A8E34 /* DMPurchaseTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0661DA44B77007A8E34 /* DMPurchaseTime.swift */; };
+		C785F0B31DA44B77007A8E34 /* DMPurchaseLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0671DA44B77007A8E34 /* DMPurchaseLog.swift */; };
+		C785F0B41DA44B77007A8E34 /* DMPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0681DA44B77007A8E34 /* DMPurchase.swift */; };
+		C785F0B51DA44B77007A8E34 /* DMProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0691DA44B77007A8E34 /* DMProfile.swift */; };
+		C785F0B61DA44B77007A8E34 /* DMPosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06A1DA44B77007A8E34 /* DMPosData.swift */; };
+		C785F0B71DA44B77007A8E34 /* DMPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06B1DA44B77007A8E34 /* DMPlayers.swift */; };
+		C785F0B81DA44B77007A8E34 /* DMPlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06C1DA44B77007A8E34 /* DMPlayerProfile.swift */; };
+		C785F0B91DA44B77007A8E34 /* DMObsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06D1DA44B77007A8E34 /* DMObsLog.swift */; };
+		C785F0BA1DA44B77007A8E34 /* DMObsLeftLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06E1DA44B77007A8E34 /* DMObsLeftLog.swift */; };
+		C785F0BB1DA44B77007A8E34 /* DMObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F06F1DA44B77007A8E34 /* DMObs.swift */; };
+		C785F0BC1DA44B77007A8E34 /* DMObjectives.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0701DA44B77007A8E34 /* DMObjectives.swift */; };
+		C785F0BD1DA44B77007A8E34 /* DMMyWordCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0711DA44B77007A8E34 /* DMMyWordCounts.swift */; };
+		C785F0BF1DA44B77007A8E34 /* DMMmrEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0731DA44B77007A8E34 /* DMMmrEstimate.swift */; };
+		C785F0C01DA44B77007A8E34 /* DMMaxHeroHit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0741DA44B77007A8E34 /* DMMaxHeroHit.swift */; };
+		C785F0C11DA44B77007A8E34 /* DMMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0751DA44B77007A8E34 /* DMMatch.swift */; };
+		C785F0C31DA44B77007A8E34 /* DMLhT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0771DA44B77007A8E34 /* DMLhT.swift */; };
+		C785F0C41DA44B77007A8E34 /* DMLastHitsPerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0781DA44B77007A8E34 /* DMLastHitsPerMin.swift */; };
+		C785F0C51DA44B77007A8E34 /* DMLanePos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0791DA44B77007A8E34 /* DMLanePos.swift */; };
+		C785F0C71DA44B77007A8E34 /* DMKillsPerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F07B1DA44B77007A8E34 /* DMKillsPerMin.swift */; };
+		C785F0C81DA44B77007A8E34 /* DMKillsLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F07C1DA44B77007A8E34 /* DMKillsLog.swift */; };
+		C785F0C91DA44B77007A8E34 /* DMKilledBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F07D1DA44B77007A8E34 /* DMKilledBy.swift */; };
+		C785F0CA1DA44B77007A8E34 /* DMKilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F07E1DA44B77007A8E34 /* DMKilled.swift */; };
+		C785F0CB1DA44B77007A8E34 /* DMItemWin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F07F1DA44B77007A8E34 /* DMItemWin.swift */; };
+		C785F0CC1DA44B77007A8E34 /* DMItemUses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0801DA44B77007A8E34 /* DMItemUses.swift */; };
+		C785F0CD1DA44B77007A8E34 /* DMItemUsage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0811DA44B77007A8E34 /* DMItemUsage.swift */; };
+		C785F0CE1DA44B77007A8E34 /* DMItemsSteamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0821DA44B77007A8E34 /* DMItemsSteamAPI.swift */; };
+		C785F0CF1DA44B77007A8E34 /* DMItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0831DA44B77007A8E34 /* DMItems.swift */; };
+		C785F0D01DA44B77007A8E34 /* DMHeroHits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0841DA44B77007A8E34 /* DMHeroHits.swift */; };
+		C785F0D11DA44B77007A8E34 /* DMHeroHealingPerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0851DA44B77007A8E34 /* DMHeroHealingPerMin.swift */; };
+		C785F0D21DA44B77007A8E34 /* DMHeroesSteamAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0861DA44B77007A8E34 /* DMHeroesSteamAPI.swift */; };
+		C785F0D31DA44B77007A8E34 /* DMHeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0871DA44B77007A8E34 /* DMHeroes.swift */; };
+		C785F0D41DA44B77007A8E34 /* DMHeroDamagePerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0881DA44B77007A8E34 /* DMHeroDamagePerMin.swift */; };
+		C785F0D51DA44B77007A8E34 /* DMGoldT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0891DA44B77007A8E34 /* DMGoldT.swift */; };
+		C785F0D71DA44B77007A8E34 /* DMGoldPerMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F08B1DA44B77007A8E34 /* DMGoldPerMin.swift */; };
+		C785F0D81DA44B77007A8E34 /* DMFirstPurchaseTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F08C1DA44B77007A8E34 /* DMFirstPurchaseTime.swift */; };
+		C785F0D91DA44B77007A8E34 /* DMDnT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F08D1DA44B77007A8E34 /* DMDnT.swift */; };
+		C785F0DA1DA44B77007A8E34 /* DMDamageTaken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F08E1DA44B77007A8E34 /* DMDamageTaken.swift */; };
+		C785F0DB1DA44B77007A8E34 /* DMDamageInflictorReceived.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F08F1DA44B77007A8E34 /* DMDamageInflictorReceived.swift */; };
+		C785F0DC1DA44B77007A8E34 /* DMDamageInflictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0901DA44B77007A8E34 /* DMDamageInflictor.swift */; };
+		C785F0DD1DA44B77007A8E34 /* DMDamage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0911DA44B77007A8E34 /* DMDamage.swift */; };
+		C785F0DF1DA44B77007A8E34 /* DMChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0931DA44B77007A8E34 /* DMChat.swift */; };
+		C785F0E01DA44B77007A8E34 /* DMBuybackLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0941DA44B77007A8E34 /* DMBuybackLog.swift */; };
+		C785F0E11DA44B77007A8E34 /* DMBenchmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0951DA44B77007A8E34 /* DMBenchmarks.swift */; };
+		C785F0E21DA44B77007A8E34 /* DMAllWordCounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0961DA44B77007A8E34 /* DMAllWordCounts.swift */; };
+		C785F0E31DA44B77007A8E34 /* DMAdditionalUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0971DA44B77007A8E34 /* DMAdditionalUnits.swift */; };
+		C785F0E51DA44B77007A8E34 /* DMAbilityUses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0991DA44B77007A8E34 /* DMAbilityUses.swift */; };
+		C785F0E61DA44B77007A8E34 /* DMAbilityUpgradesArr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F09A1DA44B77007A8E34 /* DMAbilityUpgradesArr.swift */; };
+		C785F0E71DA44B77007A8E34 /* ApiUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F09B1DA44B77007A8E34 /* ApiUser.swift */; };
+		C785F0ED1DA45792007A8E34 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785F0EC1DA45792007A8E34 /* AppService.swift */; };
+		C7A27B641DA59EBE00939333 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B631DA59EBE00939333 /* Feed.storyboard */; };
+		C7A27B671DA59ED600939333 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B651DA59ED600939333 /* Search.storyboard */; };
+		C7A27B691DA59EE600939333 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B681DA59EE600939333 /* Profile.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AE22260BE9279355F7E8396 /* Pods_DotaMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5490A1DA43DB2008D1912 /* DotaMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5490D1DA43DB2008D1912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D5490F1DA43DB2008D1912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +95,79 @@
 		27D549141DA43DB2008D1912 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27D549171DA43DB2008D1912 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27D549191DA43DB2008D1912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E326FB5CCC479FF33960AF6 /* Pods-DotaMatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaMatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch.release.xcconfig"; sourceTree = "<group>"; };
+		C785F0501DA44B77007A8E34 /* UserSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewController.swift; sourceTree = "<group>"; };
+		C785F0511DA44B77007A8E34 /* UserSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchTableViewCell.swift; sourceTree = "<group>"; };
+		C785F0521DA44B77007A8E34 /* UIColorFromHexExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorFromHexExtension.swift; sourceTree = "<group>"; };
+		C785F0541DA44B77007A8E34 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		C785F0551DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchDetailsPlayerTableViewCell.xib; sourceTree = "<group>"; };
+		C785F0561DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		C785F0581DA44B77007A8E34 /* DotaMateApiResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaMateApiResources.swift; sourceTree = "<group>"; };
+		C785F0591DA44B77007A8E34 /* DotaMateApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotaMateApi.swift; sourceTree = "<group>"; };
+		C785F05A1DA44B77007A8E34 /* DMXpT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMXpT.swift; sourceTree = "<group>"; };
+		C785F05C1DA44B77007A8E34 /* DMXpPerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMXpPerMin.swift; sourceTree = "<group>"; };
+		C785F05D1DA44B77007A8E34 /* DMTowerDamage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTowerDamage.swift; sourceTree = "<group>"; };
+		C785F05E1DA44B77007A8E34 /* DMTimes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTimes.swift; sourceTree = "<group>"; };
+		C785F05F1DA44B77007A8E34 /* DMTeamfights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMTeamfights.swift; sourceTree = "<group>"; };
+		C785F0601DA44B77007A8E34 /* DMSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSpecific.swift; sourceTree = "<group>"; };
+		C785F0611DA44B77007A8E34 /* DMSenLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSenLog.swift; sourceTree = "<group>"; };
+		C785F0621DA44B77007A8E34 /* DMSenLeftLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMSenLeftLog.swift; sourceTree = "<group>"; };
+		C785F0631DA44B77007A8E34 /* DMResultHero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMResultHero.swift; sourceTree = "<group>"; };
+		C785F0641DA44B77007A8E34 /* DMResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMResult.swift; sourceTree = "<group>"; };
+		C785F0651DA44B77007A8E34 /* DMRecentMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMRecentMatch.swift; sourceTree = "<group>"; };
+		C785F0661DA44B77007A8E34 /* DMPurchaseTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPurchaseTime.swift; sourceTree = "<group>"; };
+		C785F0671DA44B77007A8E34 /* DMPurchaseLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPurchaseLog.swift; sourceTree = "<group>"; };
+		C785F0681DA44B77007A8E34 /* DMPurchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPurchase.swift; sourceTree = "<group>"; };
+		C785F0691DA44B77007A8E34 /* DMProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMProfile.swift; sourceTree = "<group>"; };
+		C785F06A1DA44B77007A8E34 /* DMPosData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPosData.swift; sourceTree = "<group>"; };
+		C785F06B1DA44B77007A8E34 /* DMPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPlayers.swift; sourceTree = "<group>"; };
+		C785F06C1DA44B77007A8E34 /* DMPlayerProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMPlayerProfile.swift; sourceTree = "<group>"; };
+		C785F06D1DA44B77007A8E34 /* DMObsLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMObsLog.swift; sourceTree = "<group>"; };
+		C785F06E1DA44B77007A8E34 /* DMObsLeftLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMObsLeftLog.swift; sourceTree = "<group>"; };
+		C785F06F1DA44B77007A8E34 /* DMObs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMObs.swift; sourceTree = "<group>"; };
+		C785F0701DA44B77007A8E34 /* DMObjectives.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMObjectives.swift; sourceTree = "<group>"; };
+		C785F0711DA44B77007A8E34 /* DMMyWordCounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMyWordCounts.swift; sourceTree = "<group>"; };
+		C785F0731DA44B77007A8E34 /* DMMmrEstimate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMmrEstimate.swift; sourceTree = "<group>"; };
+		C785F0741DA44B77007A8E34 /* DMMaxHeroHit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMaxHeroHit.swift; sourceTree = "<group>"; };
+		C785F0751DA44B77007A8E34 /* DMMatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMMatch.swift; sourceTree = "<group>"; };
+		C785F0771DA44B77007A8E34 /* DMLhT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLhT.swift; sourceTree = "<group>"; };
+		C785F0781DA44B77007A8E34 /* DMLastHitsPerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLastHitsPerMin.swift; sourceTree = "<group>"; };
+		C785F0791DA44B77007A8E34 /* DMLanePos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMLanePos.swift; sourceTree = "<group>"; };
+		C785F07B1DA44B77007A8E34 /* DMKillsPerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMKillsPerMin.swift; sourceTree = "<group>"; };
+		C785F07C1DA44B77007A8E34 /* DMKillsLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMKillsLog.swift; sourceTree = "<group>"; };
+		C785F07D1DA44B77007A8E34 /* DMKilledBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMKilledBy.swift; sourceTree = "<group>"; };
+		C785F07E1DA44B77007A8E34 /* DMKilled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMKilled.swift; sourceTree = "<group>"; };
+		C785F07F1DA44B77007A8E34 /* DMItemWin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMItemWin.swift; sourceTree = "<group>"; };
+		C785F0801DA44B77007A8E34 /* DMItemUses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMItemUses.swift; sourceTree = "<group>"; };
+		C785F0811DA44B77007A8E34 /* DMItemUsage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMItemUsage.swift; sourceTree = "<group>"; };
+		C785F0821DA44B77007A8E34 /* DMItemsSteamAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMItemsSteamAPI.swift; sourceTree = "<group>"; };
+		C785F0831DA44B77007A8E34 /* DMItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMItems.swift; sourceTree = "<group>"; };
+		C785F0841DA44B77007A8E34 /* DMHeroHits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMHeroHits.swift; sourceTree = "<group>"; };
+		C785F0851DA44B77007A8E34 /* DMHeroHealingPerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMHeroHealingPerMin.swift; sourceTree = "<group>"; };
+		C785F0861DA44B77007A8E34 /* DMHeroesSteamAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMHeroesSteamAPI.swift; sourceTree = "<group>"; };
+		C785F0871DA44B77007A8E34 /* DMHeroes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMHeroes.swift; sourceTree = "<group>"; };
+		C785F0881DA44B77007A8E34 /* DMHeroDamagePerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMHeroDamagePerMin.swift; sourceTree = "<group>"; };
+		C785F0891DA44B77007A8E34 /* DMGoldT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMGoldT.swift; sourceTree = "<group>"; };
+		C785F08B1DA44B77007A8E34 /* DMGoldPerMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMGoldPerMin.swift; sourceTree = "<group>"; };
+		C785F08C1DA44B77007A8E34 /* DMFirstPurchaseTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMFirstPurchaseTime.swift; sourceTree = "<group>"; };
+		C785F08D1DA44B77007A8E34 /* DMDnT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDnT.swift; sourceTree = "<group>"; };
+		C785F08E1DA44B77007A8E34 /* DMDamageTaken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDamageTaken.swift; sourceTree = "<group>"; };
+		C785F08F1DA44B77007A8E34 /* DMDamageInflictorReceived.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDamageInflictorReceived.swift; sourceTree = "<group>"; };
+		C785F0901DA44B77007A8E34 /* DMDamageInflictor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDamageInflictor.swift; sourceTree = "<group>"; };
+		C785F0911DA44B77007A8E34 /* DMDamage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMDamage.swift; sourceTree = "<group>"; };
+		C785F0931DA44B77007A8E34 /* DMChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMChat.swift; sourceTree = "<group>"; };
+		C785F0941DA44B77007A8E34 /* DMBuybackLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMBuybackLog.swift; sourceTree = "<group>"; };
+		C785F0951DA44B77007A8E34 /* DMBenchmarks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMBenchmarks.swift; sourceTree = "<group>"; };
+		C785F0961DA44B77007A8E34 /* DMAllWordCounts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAllWordCounts.swift; sourceTree = "<group>"; };
+		C785F0971DA44B77007A8E34 /* DMAdditionalUnits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAdditionalUnits.swift; sourceTree = "<group>"; };
+		C785F0991DA44B77007A8E34 /* DMAbilityUses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAbilityUses.swift; sourceTree = "<group>"; };
+		C785F09A1DA44B77007A8E34 /* DMAbilityUpgradesArr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMAbilityUpgradesArr.swift; sourceTree = "<group>"; };
+		C785F09B1DA44B77007A8E34 /* ApiUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUser.swift; sourceTree = "<group>"; };
+		C785F0EC1DA45792007A8E34 /* AppService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
+		C7A27B631DA59EBE00939333 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
+		C7A27B661DA59ED600939333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
+		C7A27B681DA59EE600939333 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		DB4736853DAF0368BBCF0AA0 /* Pods-DotaMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DDFC628866810180AFBD2EA /* Pods_DotaMatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +187,8 @@
 			children = (
 				27D5490C1DA43DB2008D1912 /* DotaMatch */,
 				27D5490B1DA43DB2008D1912 /* Products */,
+				29D125682B1DA93AD9FAF2A0 /* Pods */,
+				60F2279BD00ABF2BFD1513DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +203,150 @@
 		27D5490C1DA43DB2008D1912 /* DotaMatch */ = {
 			isa = PBXGroup;
 			children = (
+				C785F0521DA44B77007A8E34 /* UIColorFromHexExtension.swift */,
+				C785F0E81DA44B89007A8E34 /* ViewControllers */,
+				C785F04E1DA44AF1007A8E34 /* api */,
 				27D5490D1DA43DB2008D1912 /* AppDelegate.swift */,
 				27D5490F1DA43DB2008D1912 /* ViewController.swift */,
 				27D549111DA43DB2008D1912 /* Main.storyboard */,
+				C7A27B681DA59EE600939333 /* Profile.storyboard */,
+				C7A27B651DA59ED600939333 /* Search.storyboard */,
+				C7A27B631DA59EBE00939333 /* Feed.storyboard */,
 				27D549141DA43DB2008D1912 /* Assets.xcassets */,
 				27D549161DA43DB2008D1912 /* LaunchScreen.storyboard */,
 				27D549191DA43DB2008D1912 /* Info.plist */,
 			);
 			path = DotaMatch;
+			sourceTree = "<group>";
+		};
+		29D125682B1DA93AD9FAF2A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB4736853DAF0368BBCF0AA0 /* Pods-DotaMatch.debug.xcconfig */,
+				4E326FB5CCC479FF33960AF6 /* Pods-DotaMatch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		60F2279BD00ABF2BFD1513DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AE22260BE9279355F7E8396 /* Pods_DotaMatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C785F04E1DA44AF1007A8E34 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				C785F0EC1DA45792007A8E34 /* AppService.swift */,
+				C785F0581DA44B77007A8E34 /* DotaMateApiResources.swift */,
+				C785F0591DA44B77007A8E34 /* DotaMateApi.swift */,
+				C785F04F1DA44AFF007A8E34 /* api models */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		C785F04F1DA44AFF007A8E34 /* api models */ = {
+			isa = PBXGroup;
+			children = (
+				C785F09B1DA44B77007A8E34 /* ApiUser.swift */,
+				C785F05A1DA44B77007A8E34 /* DMXpT.swift */,
+				C785F05C1DA44B77007A8E34 /* DMXpPerMin.swift */,
+				C785F05D1DA44B77007A8E34 /* DMTowerDamage.swift */,
+				C785F05E1DA44B77007A8E34 /* DMTimes.swift */,
+				C785F05F1DA44B77007A8E34 /* DMTeamfights.swift */,
+				C785F0601DA44B77007A8E34 /* DMSpecific.swift */,
+				C785F0611DA44B77007A8E34 /* DMSenLog.swift */,
+				C785F0621DA44B77007A8E34 /* DMSenLeftLog.swift */,
+				C785F0631DA44B77007A8E34 /* DMResultHero.swift */,
+				C785F0641DA44B77007A8E34 /* DMResult.swift */,
+				C785F0651DA44B77007A8E34 /* DMRecentMatch.swift */,
+				C785F0661DA44B77007A8E34 /* DMPurchaseTime.swift */,
+				C785F0671DA44B77007A8E34 /* DMPurchaseLog.swift */,
+				C785F0681DA44B77007A8E34 /* DMPurchase.swift */,
+				C785F0691DA44B77007A8E34 /* DMProfile.swift */,
+				C785F06A1DA44B77007A8E34 /* DMPosData.swift */,
+				C785F06B1DA44B77007A8E34 /* DMPlayers.swift */,
+				C785F06C1DA44B77007A8E34 /* DMPlayerProfile.swift */,
+				C785F06D1DA44B77007A8E34 /* DMObsLog.swift */,
+				C785F06E1DA44B77007A8E34 /* DMObsLeftLog.swift */,
+				C785F06F1DA44B77007A8E34 /* DMObs.swift */,
+				C785F0701DA44B77007A8E34 /* DMObjectives.swift */,
+				C785F0711DA44B77007A8E34 /* DMMyWordCounts.swift */,
+				C785F0731DA44B77007A8E34 /* DMMmrEstimate.swift */,
+				C785F0741DA44B77007A8E34 /* DMMaxHeroHit.swift */,
+				C785F0751DA44B77007A8E34 /* DMMatch.swift */,
+				C785F0771DA44B77007A8E34 /* DMLhT.swift */,
+				C785F0781DA44B77007A8E34 /* DMLastHitsPerMin.swift */,
+				C785F0791DA44B77007A8E34 /* DMLanePos.swift */,
+				C785F07B1DA44B77007A8E34 /* DMKillsPerMin.swift */,
+				C785F07C1DA44B77007A8E34 /* DMKillsLog.swift */,
+				C785F07D1DA44B77007A8E34 /* DMKilledBy.swift */,
+				C785F07E1DA44B77007A8E34 /* DMKilled.swift */,
+				C785F07F1DA44B77007A8E34 /* DMItemWin.swift */,
+				C785F0801DA44B77007A8E34 /* DMItemUses.swift */,
+				C785F0811DA44B77007A8E34 /* DMItemUsage.swift */,
+				C785F0821DA44B77007A8E34 /* DMItemsSteamAPI.swift */,
+				C785F0831DA44B77007A8E34 /* DMItems.swift */,
+				C785F0841DA44B77007A8E34 /* DMHeroHits.swift */,
+				C785F0851DA44B77007A8E34 /* DMHeroHealingPerMin.swift */,
+				C785F0861DA44B77007A8E34 /* DMHeroesSteamAPI.swift */,
+				C785F0871DA44B77007A8E34 /* DMHeroes.swift */,
+				C785F0881DA44B77007A8E34 /* DMHeroDamagePerMin.swift */,
+				C785F0891DA44B77007A8E34 /* DMGoldT.swift */,
+				C785F08B1DA44B77007A8E34 /* DMGoldPerMin.swift */,
+				C785F08C1DA44B77007A8E34 /* DMFirstPurchaseTime.swift */,
+				C785F08D1DA44B77007A8E34 /* DMDnT.swift */,
+				C785F08E1DA44B77007A8E34 /* DMDamageTaken.swift */,
+				C785F08F1DA44B77007A8E34 /* DMDamageInflictorReceived.swift */,
+				C785F0901DA44B77007A8E34 /* DMDamageInflictor.swift */,
+				C785F0911DA44B77007A8E34 /* DMDamage.swift */,
+				C785F0931DA44B77007A8E34 /* DMChat.swift */,
+				C785F0941DA44B77007A8E34 /* DMBuybackLog.swift */,
+				C785F0951DA44B77007A8E34 /* DMBenchmarks.swift */,
+				C785F0961DA44B77007A8E34 /* DMAllWordCounts.swift */,
+				C785F0971DA44B77007A8E34 /* DMAdditionalUnits.swift */,
+				C785F0991DA44B77007A8E34 /* DMAbilityUses.swift */,
+				C785F09A1DA44B77007A8E34 /* DMAbilityUpgradesArr.swift */,
+			);
+			name = "api models";
+			sourceTree = "<group>";
+		};
+		C785F0E81DA44B89007A8E34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C785F0EB1DA44BB6007A8E34 /* User Search */,
+				C785F0E91DA44B9A007A8E34 /* Match Details */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C785F0E91DA44B9A007A8E34 /* Match Details */ = {
+			isa = PBXGroup;
+			children = (
+				C785F0EA1DA44BA4007A8E34 /* Cells */,
+				C785F0541DA44B77007A8E34 /* MatchDetailsViewController.swift */,
+			);
+			name = "Match Details";
+			sourceTree = "<group>";
+		};
+		C785F0EA1DA44BA4007A8E34 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C785F0551DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.xib */,
+				C785F0561DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		C785F0EB1DA44BB6007A8E34 /* User Search */ = {
+			isa = PBXGroup;
+			children = (
+				C785F0501DA44B77007A8E34 /* UserSearchTableViewController.swift */,
+				C785F0511DA44B77007A8E34 /* UserSearchTableViewCell.swift */,
+			);
+			name = "User Search";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +356,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27D5491C1DA43DB2008D1912 /* Build configuration list for PBXNativeTarget "DotaMatch" */;
 			buildPhases = (
+				B2100A4076C2E73938D60AFD /* [CP] Check Pods Manifest.lock */,
 				27D549061DA43DB2008D1912 /* Sources */,
 				27D549071DA43DB2008D1912 /* Frameworks */,
 				27D549081DA43DB2008D1912 /* Resources */,
+				BEA00FF0FD105EEC480A8893 /* [CP] Embed Pods Frameworks */,
+				1082C8FACCDBF26F20D87B1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +384,8 @@
 				TargetAttributes = {
 					27D549091DA43DB2008D1912 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = A92UW2429U;
+						DevelopmentTeam = AEA9F85YKD;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -124,21 +413,140 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7A27B641DA59EBE00939333 /* Feed.storyboard in Resources */,
 				27D549181DA43DB2008D1912 /* LaunchScreen.storyboard in Resources */,
 				27D549151DA43DB2008D1912 /* Assets.xcassets in Resources */,
 				27D549131DA43DB2008D1912 /* Main.storyboard in Resources */,
+				C7A27B671DA59ED600939333 /* Search.storyboard in Resources */,
+				C7A27B691DA59EE600939333 /* Profile.storyboard in Resources */,
+				C785F0A11DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1082C8FACCDBF26F20D87B1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2100A4076C2E73938D60AFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BEA00FF0FD105EEC480A8893 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27D549061DA43DB2008D1912 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C785F0E51DA44B77007A8E34 /* DMAbilityUses.swift in Sources */,
+				C785F0DD1DA44B77007A8E34 /* DMDamage.swift in Sources */,
+				C785F0C51DA44B77007A8E34 /* DMLanePos.swift in Sources */,
+				C785F0A91DA44B77007A8E34 /* DMTowerDamage.swift in Sources */,
+				C785F0B01DA44B77007A8E34 /* DMResult.swift in Sources */,
+				C785F0CE1DA44B77007A8E34 /* DMItemsSteamAPI.swift in Sources */,
+				C785F0D41DA44B77007A8E34 /* DMHeroDamagePerMin.swift in Sources */,
+				C785F0DC1DA44B77007A8E34 /* DMDamageInflictor.swift in Sources */,
+				C785F0B11DA44B77007A8E34 /* DMRecentMatch.swift in Sources */,
+				C785F09D1DA44B77007A8E34 /* UserSearchTableViewCell.swift in Sources */,
+				C785F0E21DA44B77007A8E34 /* DMAllWordCounts.swift in Sources */,
+				C785F0BC1DA44B77007A8E34 /* DMObjectives.swift in Sources */,
 				27D549101DA43DB2008D1912 /* ViewController.swift in Sources */,
+				C785F0A51DA44B77007A8E34 /* DotaMateApi.swift in Sources */,
+				C785F0A41DA44B77007A8E34 /* DotaMateApiResources.swift in Sources */,
+				C785F0DF1DA44B77007A8E34 /* DMChat.swift in Sources */,
+				C785F0BF1DA44B77007A8E34 /* DMMmrEstimate.swift in Sources */,
+				C785F0D81DA44B77007A8E34 /* DMFirstPurchaseTime.swift in Sources */,
+				C785F09C1DA44B77007A8E34 /* UserSearchTableViewController.swift in Sources */,
+				C785F0A21DA44B77007A8E34 /* MatchDetailsPlayerTableViewCell.swift in Sources */,
+				C785F0CF1DA44B77007A8E34 /* DMItems.swift in Sources */,
+				C785F0B21DA44B77007A8E34 /* DMPurchaseTime.swift in Sources */,
+				C785F0BB1DA44B77007A8E34 /* DMObs.swift in Sources */,
+				C785F0D11DA44B77007A8E34 /* DMHeroHealingPerMin.swift in Sources */,
+				C785F0B51DA44B77007A8E34 /* DMProfile.swift in Sources */,
+				C785F0D21DA44B77007A8E34 /* DMHeroesSteamAPI.swift in Sources */,
+				C785F0A61DA44B77007A8E34 /* DMXpT.swift in Sources */,
+				C785F0AD1DA44B77007A8E34 /* DMSenLog.swift in Sources */,
+				C785F09E1DA44B77007A8E34 /* UIColorFromHexExtension.swift in Sources */,
+				C785F0E71DA44B77007A8E34 /* ApiUser.swift in Sources */,
+				C785F0BA1DA44B77007A8E34 /* DMObsLeftLog.swift in Sources */,
+				C785F0C81DA44B77007A8E34 /* DMKillsLog.swift in Sources */,
+				C785F0AC1DA44B77007A8E34 /* DMSpecific.swift in Sources */,
+				C785F0AF1DA44B77007A8E34 /* DMResultHero.swift in Sources */,
+				C785F0E01DA44B77007A8E34 /* DMBuybackLog.swift in Sources */,
+				C785F0E11DA44B77007A8E34 /* DMBenchmarks.swift in Sources */,
+				C785F0AB1DA44B77007A8E34 /* DMTeamfights.swift in Sources */,
+				C785F0E31DA44B77007A8E34 /* DMAdditionalUnits.swift in Sources */,
+				C785F0C91DA44B77007A8E34 /* DMKilledBy.swift in Sources */,
+				C785F0CB1DA44B77007A8E34 /* DMItemWin.swift in Sources */,
+				C785F0BD1DA44B77007A8E34 /* DMMyWordCounts.swift in Sources */,
+				C785F0C41DA44B77007A8E34 /* DMLastHitsPerMin.swift in Sources */,
+				C785F0D51DA44B77007A8E34 /* DMGoldT.swift in Sources */,
+				C785F0B41DA44B77007A8E34 /* DMPurchase.swift in Sources */,
+				C785F0D01DA44B77007A8E34 /* DMHeroHits.swift in Sources */,
+				C785F0B81DA44B77007A8E34 /* DMPlayerProfile.swift in Sources */,
+				C785F0C71DA44B77007A8E34 /* DMKillsPerMin.swift in Sources */,
+				C785F0AA1DA44B77007A8E34 /* DMTimes.swift in Sources */,
+				C785F0A01DA44B77007A8E34 /* MatchDetailsViewController.swift in Sources */,
+				C785F0C01DA44B77007A8E34 /* DMMaxHeroHit.swift in Sources */,
+				C785F0D91DA44B77007A8E34 /* DMDnT.swift in Sources */,
+				C785F0B31DA44B77007A8E34 /* DMPurchaseLog.swift in Sources */,
+				C785F0ED1DA45792007A8E34 /* AppService.swift in Sources */,
+				C785F0DA1DA44B77007A8E34 /* DMDamageTaken.swift in Sources */,
+				C785F0A81DA44B77007A8E34 /* DMXpPerMin.swift in Sources */,
+				C785F0E61DA44B77007A8E34 /* DMAbilityUpgradesArr.swift in Sources */,
+				C785F0AE1DA44B77007A8E34 /* DMSenLeftLog.swift in Sources */,
+				C785F0B91DA44B77007A8E34 /* DMObsLog.swift in Sources */,
+				C785F0D71DA44B77007A8E34 /* DMGoldPerMin.swift in Sources */,
+				C785F0D31DA44B77007A8E34 /* DMHeroes.swift in Sources */,
+				C785F0CC1DA44B77007A8E34 /* DMItemUses.swift in Sources */,
+				C785F0C11DA44B77007A8E34 /* DMMatch.swift in Sources */,
+				C785F0CD1DA44B77007A8E34 /* DMItemUsage.swift in Sources */,
+				C785F0C31DA44B77007A8E34 /* DMLhT.swift in Sources */,
 				27D5490E1DA43DB2008D1912 /* AppDelegate.swift in Sources */,
+				C785F0B61DA44B77007A8E34 /* DMPosData.swift in Sources */,
+				C785F0B71DA44B77007A8E34 /* DMPlayers.swift in Sources */,
+				C785F0DB1DA44B77007A8E34 /* DMDamageInflictorReceived.swift in Sources */,
+				C785F0CA1DA44B77007A8E34 /* DMKilled.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +567,14 @@
 				27D549171DA43DB2008D1912 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C7A27B651DA59ED600939333 /* Search.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7A27B661DA59ED600939333 /* Base */,
+			);
+			name = Search.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -257,9 +673,10 @@
 		};
 		27D5491D1DA43DB2008D1912 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB4736853DAF0368BBCF0AA0 /* Pods-DotaMatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A92UW2429U;
+				DEVELOPMENT_TEAM = AEA9F85YKD;
 				INFOPLIST_FILE = DotaMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flaminis.DotaMatch;
@@ -270,9 +687,10 @@
 		};
 		27D5491E1DA43DB2008D1912 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E326FB5CCC479FF33960AF6 /* Pods-DotaMatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A92UW2429U;
+				DEVELOPMENT_TEAM = AEA9F85YKD;
 				INFOPLIST_FILE = DotaMatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Flaminis.DotaMatch;
@@ -300,6 +718,7 @@
 				27D5491E1DA43DB2008D1912 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
