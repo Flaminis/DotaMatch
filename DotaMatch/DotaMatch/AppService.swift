@@ -18,6 +18,8 @@ class AppService: NSObject {
     
     var heroes = [Int:DMHeroes]()
     
+    var steamId = Int()
+    
     func setup() {
         api.getItems()
         api.downloadHeroesFromAPI()
