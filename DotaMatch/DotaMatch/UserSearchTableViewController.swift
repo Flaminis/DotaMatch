@@ -62,6 +62,8 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
         
         cell.displayNameLabel.text = user.displayName!
         
+        cell.avatarImageView.image = nil
+        
         AppService.sharedInstance.getImage(user.avatar!, imageView: cell.avatarImageView)
         
         return cell
