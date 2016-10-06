@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,19 +16,31 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
     
     var matchToShow = Int()
     
-    var whatToSearch : String = " "{
-        didSet{
-            getUsers(whatToSearch)
-        }
-    }
+    var delegate : RegistrationDelegate?
+    
+    var regSearchString : String?
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        searchTextField.autocorrectionType = .no
+        searchTextField.keyboardAppearance = .dark
 
-//        getUsers("General Douchington")
+        if let searchString = regSearchString {
+            searchTextField.text = searchString
+            getUsers(searchString)
+        }
         
     }
     
     func getUsers(_ searchString: String) {
+        
+        if searchString == "" {
+            return
+        }
         
         users.removeAll()
     
@@ -44,6 +56,15 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
             
         }
     }
+    
+    @IBAction func searchButtonPressed(_ sender: UITextField) {
+        
+        if let searchString = sender.text {
+            sender.resignFirstResponder()
+            self.getUsers(searchString)
+        }
+        
+    }
 
     // MARK: - Table view data source
 
@@ -58,7 +79,7 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userSearchCell", for: indexPath) as! UserSearchTableViewCell
         
-        let user = users[(indexPath as NSIndexPath).row]
+        let user = users[indexPath.row]
         
         cell.displayNameLabel.text = user.displayName!
         
@@ -69,34 +90,15 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
-func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        let user = users[(indexPath as NSIndexPath).row]
-        
-        AppService.sharedInstance.getRecentMatches(user.accountId!, success: { (result) in
-            
-            self.matchToShow = result!.first!.matchId!
-            
-            self.performSegue(withIdentifier: "matchSegue", sender: nil)
-            
-        }) { (result) in
-            
-            print("shit")
-            
+
+        if let accountId = users[indexPath.row].accountId?.steam32to64String() {
+            delegate?.recieveAccountId(accountId)
+            self.dismiss(animated: true, completion: nil)
         }
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "matchSegue" {
-            let vc = segue.destination as! MatchDetailsViewController
-            
-            vc.matchId = matchToShow
-        }
-        
-    }
-
 }

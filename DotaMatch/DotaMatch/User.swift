@@ -13,6 +13,7 @@ class User: PFUser {
 
     @NSManaged var avatar: PFFile
     @NSManaged var SteamID: String
+    @NSManaged var mmr: String
     @NSManaged var upvotes: Int
     
 }

@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    func loginPressed(){
+    func loginPressed() {
         let username = self.usernameTextField.text
         let password = self.passwordTextField.text
         

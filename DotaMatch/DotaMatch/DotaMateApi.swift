@@ -14,6 +14,9 @@ class DotaMateApi: NSObject {
         
     let baseUrl = "https://api.opendota.com/api"
     
+    //Bools
+    var userSearchInProgress = false
+    
     func getRequest(_ url : String, pathParams : [String:String]?=nil, queryParams : [String:AnyObject]?=nil, completionHandler: @escaping (Any?, NSError?) -> ()) {
         
         var finalUrl = baseUrl
@@ -53,11 +56,7 @@ class DotaMateApi: NSObject {
         
         imageView.url = url
         
-        print(url)
-        
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseData { response in
-            
-            print(response.request)
             
             if imageView.url == response.request!.url!.absoluteString {
                 let image = UIImage(data: response.data!)
@@ -72,8 +71,9 @@ class DotaMateApi: NSObject {
     
     func getSearchResults(_ queryParams: [String : AnyObject], completionHandler: @escaping ([ApiUser]?, NSError?) -> ()) {
         let url = DotaMateApiResources.Resource.ResourceSearch.rawValue
-        
+    
         getRequest(url, queryParams: queryParams) { response1, error in
+            
             if error != nil {
                 //fix later
                 print("something went wrong")
@@ -81,7 +81,7 @@ class DotaMateApi: NSObject {
             
             let response = response1 as? [AnyObject]
             
-            let count = response!.count
+            let count = response?.count
             
             var x = 0
             
@@ -93,18 +93,15 @@ class DotaMateApi: NSObject {
                 
                 let newUser = ApiUser.init(json: json)
                 
-                print(newUser.displayName!)
-                
                 users.append(newUser)
                 
                 x += 1
                 
-            } while x < count
+            } while x < count!
             
             completionHandler(users, error)
-
+            
         }
-        
     }
     
     func getMatch(_ matchId: Int, completionHandler: @escaping (DMMatch?, NSError?) -> ()) {
@@ -218,4 +215,6 @@ class DotaMateApi: NSObject {
             
         }
     }
+
+    
 }
