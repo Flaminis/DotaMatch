@@ -19,7 +19,7 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getUsers("General Douchington")
+        getUsers()
         
     }
     
@@ -56,6 +56,8 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
         let user = users[(indexPath as NSIndexPath).row]
         
         cell.displayNameLabel.text = user.displayName!
+        
+        cell.avatarImageView.image = nil
         
         AppService.sharedInstance.getImage(user.avatar!, imageView: cell.avatarImageView)
         

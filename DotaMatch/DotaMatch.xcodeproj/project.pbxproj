@@ -84,6 +84,7 @@
 		C7A27B641DA59EBE00939333 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B631DA59EBE00939333 /* Feed.storyboard */; };
 		C7A27B671DA59ED600939333 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B651DA59ED600939333 /* Search.storyboard */; };
 		C7A27B691DA59EE600939333 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B681DA59EE600939333 /* Profile.storyboard */; };
+		C7A27B6B1DA5AE1700939333 /* UIImageViewURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +168,7 @@
 		C7A27B631DA59EBE00939333 /* Feed.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		C7A27B661DA59ED600939333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		C7A27B681DA59EE600939333 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewURLExtension.swift; sourceTree = "<group>"; };
 		DB4736853DAF0368BBCF0AA0 /* Pods-DotaMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C785F0521DA44B77007A8E34 /* UIColorFromHexExtension.swift */,
+				C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */,
 				C785F0E81DA44B89007A8E34 /* ViewControllers */,
 				C785F04E1DA44AF1007A8E34 /* api */,
 				27D5490D1DA43DB2008D1912 /* AppDelegate.swift */,
@@ -528,6 +531,7 @@
 				C785F0AA1DA44B77007A8E34 /* DMTimes.swift in Sources */,
 				C785F0A01DA44B77007A8E34 /* MatchDetailsViewController.swift in Sources */,
 				C785F0C01DA44B77007A8E34 /* DMMaxHeroHit.swift in Sources */,
+				C7A27B6B1DA5AE1700939333 /* UIImageViewURLExtension.swift in Sources */,
 				C785F0D91DA44B77007A8E34 /* DMDnT.swift in Sources */,
 				C785F0B31DA44B77007A8E34 /* DMPurchaseLog.swift in Sources */,
 				C785F0ED1DA45792007A8E34 /* AppService.swift in Sources */,

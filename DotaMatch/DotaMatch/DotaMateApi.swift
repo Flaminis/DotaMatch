@@ -51,20 +51,22 @@ class DotaMateApi: NSObject {
     
     func getImage(_ url: String, imageView: UIImageView) {
         
-        let urlToCheck = url
+        imageView.url = url
+        
+        print(url)
         
         Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseData { response in
             
-//            if urlToCheck == imageView.url {
-//                
-//            }
+            print(response.request)
             
-            let image = UIImage(data: response.data!)
-            
-            DispatchQueue.main.async( execute: {
-                imageView.image = image
-            })
-        
+            if imageView.url == response.request!.url!.absoluteString {
+                let image = UIImage(data: response.data!)
+                
+                DispatchQueue.main.async( execute: {
+                    imageView.image = image
+                })
+                
+            }
         }
     }
     
