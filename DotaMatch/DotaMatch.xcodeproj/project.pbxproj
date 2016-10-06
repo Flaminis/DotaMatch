@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271C08391DA5B4120074F360 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C08381DA5B4120074F360 /* LoginViewController.swift */; };
+		271C083B1DA5B6370074F360 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C083A1DA5B6370074F360 /* RegisterViewController.swift */; };
+		271C083D1DA5B9130074F360 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C083C1DA5B9130074F360 /* User.swift */; };
+		271C08411DA5B9630074F360 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C08401DA5B9630074F360 /* Constants.swift */; };
 		27D5490E1DA43DB2008D1912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5490D1DA43DB2008D1912 /* AppDelegate.swift */; };
 		27D549101DA43DB2008D1912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D5490F1DA43DB2008D1912 /* ViewController.swift */; };
 		27D549131DA43DB2008D1912 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D549111DA43DB2008D1912 /* Main.storyboard */; };
@@ -88,6 +92,10 @@
 
 /* Begin PBXFileReference section */
 		1AE22260BE9279355F7E8396 /* Pods_DotaMatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotaMatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		271C08381DA5B4120074F360 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		271C083A1DA5B6370074F360 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		271C083C1DA5B9130074F360 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		271C08401DA5B9630074F360 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27D5490A1DA43DB2008D1912 /* DotaMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DotaMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27D5490D1DA43DB2008D1912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27D5490F1DA43DB2008D1912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +190,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271C083E1DA5B9530074F360 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				271C083C1DA5B9130074F360 /* User.swift */,
+				271C08401DA5B9630074F360 /* Constants.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		27D549011DA43DB2008D1912 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +232,7 @@
 				27D549141DA43DB2008D1912 /* Assets.xcassets */,
 				27D549161DA43DB2008D1912 /* LaunchScreen.storyboard */,
 				27D549191DA43DB2008D1912 /* Info.plist */,
+				271C083E1DA5B9530074F360 /* Model */,
 			);
 			path = DotaMatch;
 			sourceTree = "<group>";
@@ -318,6 +336,8 @@
 			children = (
 				C785F0EB1DA44BB6007A8E34 /* User Search */,
 				C785F0E91DA44B9A007A8E34 /* Match Details */,
+				271C08381DA5B4120074F360 /* LoginViewController.swift */,
+				271C083A1DA5B6370074F360 /* RegisterViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -479,10 +499,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C785F0E51DA44B77007A8E34 /* DMAbilityUses.swift in Sources */,
+				271C083B1DA5B6370074F360 /* RegisterViewController.swift in Sources */,
 				C785F0DD1DA44B77007A8E34 /* DMDamage.swift in Sources */,
 				C785F0C51DA44B77007A8E34 /* DMLanePos.swift in Sources */,
 				C785F0A91DA44B77007A8E34 /* DMTowerDamage.swift in Sources */,
 				C785F0B01DA44B77007A8E34 /* DMResult.swift in Sources */,
+				271C08411DA5B9630074F360 /* Constants.swift in Sources */,
 				C785F0CE1DA44B77007A8E34 /* DMItemsSteamAPI.swift in Sources */,
 				C785F0D41DA44B77007A8E34 /* DMHeroDamagePerMin.swift in Sources */,
 				C785F0DC1DA44B77007A8E34 /* DMDamageInflictor.swift in Sources */,
@@ -506,6 +528,7 @@
 				C785F0D21DA44B77007A8E34 /* DMHeroesSteamAPI.swift in Sources */,
 				C785F0A61DA44B77007A8E34 /* DMXpT.swift in Sources */,
 				C785F0AD1DA44B77007A8E34 /* DMSenLog.swift in Sources */,
+				271C08391DA5B4120074F360 /* LoginViewController.swift in Sources */,
 				C785F09E1DA44B77007A8E34 /* UIColorFromHexExtension.swift in Sources */,
 				C785F0E71DA44B77007A8E34 /* ApiUser.swift in Sources */,
 				C785F0BA1DA44B77007A8E34 /* DMObsLeftLog.swift in Sources */,
@@ -544,6 +567,7 @@
 				C785F0C31DA44B77007A8E34 /* DMLhT.swift in Sources */,
 				27D5490E1DA43DB2008D1912 /* AppDelegate.swift in Sources */,
 				C785F0B61DA44B77007A8E34 /* DMPosData.swift in Sources */,
+				271C083D1DA5B9130074F360 /* User.swift in Sources */,
 				C785F0B71DA44B77007A8E34 /* DMPlayers.swift in Sources */,
 				C785F0DB1DA44B77007A8E34 /* DMDamageInflictorReceived.swift in Sources */,
 				C785F0CA1DA44B77007A8E34 /* DMKilled.swift in Sources */,

@@ -1,0 +1,39 @@
+PODS:
+  - Alamofire (4.0.1)
+  - Bolts/Tasks (1.8.4)
+  - Kingfisher (3.1.1)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
+  - SCLAlertView (0.6.0)
+  - SwiftyJSON (3.1.0)
+  - TextFieldEffects (1.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - Parse
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift`)
+  - SwiftyJSON
+  - TextFieldEffects
+
+EXTERNAL SOURCES:
+  SCLAlertView:
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
+
+CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: ac3d58970d785da0755049a28eca193893c142d0
+    :git: https://github.com/vikmeup/SCLAlertView-Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Kingfisher: 12b755ae697cc9f0fd3e550db8417fa1233e09ab
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+  SCLAlertView: 0f6b3c23a48b4993564ff1dd3c065782e4b2b687
+  SwiftyJSON: 29b9f2a64f118c07e691667c2ba1efe536acfe0b
+  TextFieldEffects: ef594746f17997c813e07633f8ae5acaf9b04f27
+
+PODFILE CHECKSUM: 1e8af72e448dc15f5d684e1de8b07b33540adb36
+
+COCOAPODS: 1.0.1

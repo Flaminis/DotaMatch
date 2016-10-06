@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PXa-ZA-QBZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TSg-bB-4uW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -70,7 +71,255 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLB-ta-pss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708" y="-578.86056971514245"/>
+            <point key="canvasLocation" x="364" y="-497.00149925037488"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ttp-CX-WnP">
+            <objects>
+                <viewController id="TSg-bB-4uW" customClass="LoginViewController" customModule="DotaMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mEr-1e-yS2"/>
+                        <viewControllerLayoutGuide type="bottom" id="WIF-pS-mnx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s4c-qc-5fW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotaMatchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="C5m-Fo-vG1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="Qnn-tQ-UIb"/>
+                                    <constraint firstAttribute="width" constant="96" id="wCM-cL-x58"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DotaMatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaT-YA-X9h">
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yLj-FH-gJv" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Epv-dn-DzB" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please register" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1O-QM-9J3">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fro-3h-XIP">
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="29"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.56862745098039214" green="0.71372549019607845" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="TSg-bB-4uW" eventType="touchUpInside" id="AIq-cb-PN7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8jj-eQ-EFj">
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="0.79607843137254897" green="0.12941176470588234" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="TSg-bB-4uW" eventType="touchUpInside" id="Lvo-hK-l4L"/>
+                                    <segue destination="HJf-vK-lgE" kind="show" id="IS5-sw-Akz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-ii-oBf">
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Join as Guest">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="guestButton:" destination="TSg-bB-4uW" eventType="touchUpInside" id="x9y-xI-L1j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074496529996395111" green="0.074517466127872467" blue="0.074495203793048859" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C5m-Fo-vG1" firstAttribute="centerX" secondItem="s4c-qc-5fW" secondAttribute="centerX" id="03b-Sn-ZN4"/>
+                            <constraint firstItem="vaT-YA-X9h" firstAttribute="top" secondItem="C5m-Fo-vG1" secondAttribute="bottom" constant="8" id="06R-L0-IiB"/>
+                            <constraint firstItem="Fro-3h-XIP" firstAttribute="trailing" secondItem="Epv-dn-DzB" secondAttribute="trailing" constant="-20" id="31w-pg-C2b"/>
+                            <constraint firstItem="yLj-FH-gJv" firstAttribute="top" secondItem="a1O-QM-9J3" secondAttribute="bottom" constant="20" id="8bJ-Hv-CZo"/>
+                            <constraint firstItem="a1O-QM-9J3" firstAttribute="top" secondItem="vaT-YA-X9h" secondAttribute="bottom" constant="8" id="Azz-gT-aUW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yLj-FH-gJv" secondAttribute="trailing" id="ERv-M4-dC0"/>
+                            <constraint firstItem="a1O-QM-9J3" firstAttribute="centerX" secondItem="vaT-YA-X9h" secondAttribute="centerX" id="M2P-9o-kcd"/>
+                            <constraint firstItem="Fro-3h-XIP" firstAttribute="top" secondItem="Epv-dn-DzB" secondAttribute="bottom" constant="8" id="OkF-DP-iai"/>
+                            <constraint firstItem="Epv-dn-DzB" firstAttribute="trailing" secondItem="yLj-FH-gJv" secondAttribute="trailing" id="T0U-dw-rgD"/>
+                            <constraint firstItem="vaT-YA-X9h" firstAttribute="centerX" secondItem="C5m-Fo-vG1" secondAttribute="centerX" id="VTe-Co-4bE"/>
+                            <constraint firstItem="Epv-dn-DzB" firstAttribute="leading" secondItem="yLj-FH-gJv" secondAttribute="leading" id="b3h-OF-0B6"/>
+                            <constraint firstItem="C5m-Fo-vG1" firstAttribute="top" secondItem="mEr-1e-yS2" secondAttribute="bottom" constant="8" id="dfp-0a-FI9"/>
+                            <constraint firstItem="pXQ-ii-oBf" firstAttribute="top" secondItem="8jj-eQ-EFj" secondAttribute="bottom" constant="8" id="fNU-cm-KYH"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yLj-FH-gJv" secondAttribute="leading" id="fXa-tI-VZn"/>
+                            <constraint firstItem="Epv-dn-DzB" firstAttribute="top" secondItem="yLj-FH-gJv" secondAttribute="bottom" constant="12" id="g9p-HU-2d2"/>
+                            <constraint firstItem="pXQ-ii-oBf" firstAttribute="centerX" secondItem="C5m-Fo-vG1" secondAttribute="centerX" id="gqD-mU-pft"/>
+                            <constraint firstItem="8jj-eQ-EFj" firstAttribute="top" secondItem="Epv-dn-DzB" secondAttribute="bottom" constant="8" id="uQP-T2-j5d"/>
+                            <constraint firstItem="8jj-eQ-EFj" firstAttribute="leading" secondItem="Epv-dn-DzB" secondAttribute="leading" constant="30" id="w1v-NN-nVJ"/>
+                            <constraint firstItem="Epv-dn-DzB" firstAttribute="centerX" secondItem="yLj-FH-gJv" secondAttribute="centerX" id="z1X-Xm-FbJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Epv-dn-DzB" id="eCU-qK-nvA"/>
+                        <outlet property="usernameTextField" destination="yLj-FH-gJv" id="qlj-kx-xAP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oGs-gD-9zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3428" y="139"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="eDU-IP-hV9">
+            <objects>
+                <viewController id="HJf-vK-lgE" customClass="RegisterViewController" customModule="DotaMatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="czf-ql-1oe"/>
+                        <viewControllerLayoutGuide type="bottom" id="8rf-TI-Nhj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Xy-xA-sla">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DotaMatchIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Tcz-7u-rnv">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="96" id="AjN-JM-NGA"/>
+                                    <constraint firstAttribute="height" constant="96" id="jKw-jL-QzT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DotaMatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nF0-lj-uaL">
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEG-J5-NJ4" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" keyboardAppearance="alert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Steam64 or Steam32 ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nW3-qT-ivm" customClass="MadokaTextField" customModule="TextFieldEffects">
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="inactiveColor">
+                                        <color key="value" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="activeColor">
+                                        <color key="value" red="0.0" green="0.40000000000000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0x6-oZ-mHc">
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <state key="normal" title="Find SteamID with Profile name">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="findSteamButton:" destination="HJf-vK-lgE" eventType="touchUpInside" id="nb4-5n-I6l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4k-6q-bHx">
+                                <frame key="frameInset" minX="134" minY="403" width="106" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="0.79607843140000001" green="0.12941176469999999" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signupButton:" destination="HJf-vK-lgE" eventType="touchUpInside" id="TEh-80-o7p"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="nW3-qT-ivm" secondAttribute="trailing" id="4Ck-0s-lxj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="iEG-J5-NJ4" secondAttribute="leading" id="4uX-WL-Fss"/>
+                            <constraint firstItem="0x6-oZ-mHc" firstAttribute="leading" secondItem="nW3-qT-ivm" secondAttribute="leading" id="Ayi-qi-y66"/>
+                            <constraint firstItem="0x6-oZ-mHc" firstAttribute="top" secondItem="nW3-qT-ivm" secondAttribute="bottom" id="Dmt-zl-r2a"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="nW3-qT-ivm" secondAttribute="leading" id="GQ7-Fs-gke"/>
+                            <constraint firstItem="nF0-lj-uaL" firstAttribute="centerX" secondItem="Tcz-7u-rnv" secondAttribute="centerX" id="KbE-MJ-9WF"/>
+                            <constraint firstItem="iEG-J5-NJ4" firstAttribute="top" secondItem="nF0-lj-uaL" secondAttribute="bottom" constant="19" id="Ogs-sL-llm"/>
+                            <constraint firstItem="nF0-lj-uaL" firstAttribute="top" secondItem="Tcz-7u-rnv" secondAttribute="bottom" constant="8" id="aFp-Ta-Vdn"/>
+                            <constraint firstItem="0x6-oZ-mHc" firstAttribute="trailing" secondItem="nW3-qT-ivm" secondAttribute="trailing" id="dLh-ne-Xyw"/>
+                            <constraint firstItem="nW3-qT-ivm" firstAttribute="top" secondItem="iEG-J5-NJ4" secondAttribute="bottom" constant="8" id="lVf-0d-rmu"/>
+                            <constraint firstItem="Tcz-7u-rnv" firstAttribute="centerX" secondItem="1Xy-xA-sla" secondAttribute="centerX" id="lYC-yj-PwF"/>
+                            <constraint firstItem="Tcz-7u-rnv" firstAttribute="top" secondItem="czf-ql-1oe" secondAttribute="bottom" constant="8" id="pPx-VM-PVK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iEG-J5-NJ4" secondAttribute="trailing" id="rPw-Vl-FbD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XHB-88-Cgx"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="iEG-J5-NJ4" id="xI1-5E-Ozt"/>
+                        <outlet property="steamTextField" destination="nW3-qT-ivm" id="qm4-cn-PNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEK-E8-eXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2430" y="139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ROp-OV-qDb">
@@ -125,14 +374,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Z5-fA-QDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-708" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-1100" y="139"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabBar-->
         <scene sceneID="ibj-20-FPt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4RD-Di-qj4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" title="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="4RD-Di-qj4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Mf3-6D-Esf">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -144,7 +394,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjo-zD-kfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
         <!--Feed-->
         <scene sceneID="wag-hF-Jhw">
@@ -154,7 +404,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3li-kX-Xic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1131" y="68"/>
+            <point key="canvasLocation" x="2068.8000000000002" y="67.466266866566727"/>
         </scene>
         <!--Search-->
         <scene sceneID="keA-Ha-Q7S">
@@ -164,7 +414,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFP-qE-i6S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="139"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="138.53073463268368"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ltz-Rg-Jj1">
@@ -174,7 +424,10 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TmS-j6-i4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1139" y="206"/>
+            <point key="canvasLocation" x="2076.8000000000002" y="205.99700149925039"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DotaMatchIcon" width="513" height="512"/>
+    </resources>
 </document>

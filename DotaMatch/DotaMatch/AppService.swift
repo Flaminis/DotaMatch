@@ -18,7 +18,13 @@ class AppService: NSObject {
     
     var heroes = [Int:DMHeroes]()
     
+//<<<<<<< Updated upstream
     var steamId = Int()
+    var username = String()
+    var password = String()
+    var searchName = String()
+    
+
     
     func setup() {
         api.getItems()
@@ -81,6 +87,10 @@ class AppService: NSObject {
     func getImage(_ url: String, imageView: UIImageView) {
         api.getImage(url, imageView: imageView)
     }
+    
+    
+    
+  
 
     
 }

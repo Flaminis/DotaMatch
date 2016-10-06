@@ -16,10 +16,15 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
     
     var matchToShow = Int()
     
+    var whatToSearch : String = " "{
+        didSet{
+            getUsers(whatToSearch)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getUsers("General Douchington")
+//        getUsers("General Douchington")
         
     }
     

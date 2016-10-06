@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        UIApplication.shared.statusBarStyle = .lightContent
+        parseSetUp()
+        login()
+
+
         // Override point for customization after application launch.
         return true
     }
@@ -41,6 +47,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func parseSetUp(){
+        
+        Parse.enableLocalDatastore()
+        Parse.initialize( with: ParseClientConfiguration { (config: ParseMutableClientConfiguration) -> Void in
+            config.applicationId = ParseSettings.applicationId
+            config.clientKey = ParseSettings.clientKey
+            config.server = ParseSettings.server
+        })
+        User.registerSubclass()
+        
 
+    }
+    func login() {
+        if let user = User.current() {
+            print("\(#function) -> \(user.username)")
+            
+            let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let myTabBar = storyboard.instantiateViewController(withIdentifier: "TabBar") as!UITabBarController
+            window?.rootViewController = myTabBar
+        }
+    }
 }
 
