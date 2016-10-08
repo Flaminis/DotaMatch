@@ -11,11 +11,7 @@ import SCLAlertView
 import Parse
 import TextFieldEffects
 
-protocol RegistrationDelegate {
-    func recieveAccountId(_ accountID: String)
-}
-
-class RegisterViewController: UIViewController, RegistrationDelegate {
+class RegisterViewController: UIViewController, UserSearchDelegate {
     
     
     @IBOutlet weak var steamTextField: MadokaTextField!
@@ -79,14 +75,9 @@ class RegisterViewController: UIViewController, RegistrationDelegate {
     }
     
     func searchPopUp(){
-        let appearance = SCLAlertView.SCLAppearance(
-            kTitleFont: UIFont(name: "AvenirNext-Regular", size: 20)!,
-            kTextFont: UIFont(name: "AvenirNext-Regular", size: 14)!,
-            kButtonFont: UIFont(name: "AvenirNext-Bold", size: 14)!,
-            showCloseButton: true
-        )
         
-        let alertView = SCLAlertView(appearance: appearance)
+        let alertView = SCLAlertView(appearance: AlertHelper.loginSearchAppearance())
+        
         let userNameTextField = alertView.addTextField("Dota2 name")
         userNameTextField.spellCheckingType = .no
         userNameTextField.autocorrectionType = .no
@@ -111,12 +102,12 @@ class RegisterViewController: UIViewController, RegistrationDelegate {
     @IBAction func findSteamButton(_ sender: UIButton) {
         searchPopUp()
     }
+    
     @IBAction func signupButton(_ sender: UIButton) {
         signUp()
     }
     
     func recieveAccountId(_ accountID: String) {
-        print(accountID)
         steamTextField.text = accountID
     }
     

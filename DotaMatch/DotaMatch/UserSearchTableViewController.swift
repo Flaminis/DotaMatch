@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol UserSearchDelegate {
+    func recieveAccountId(_ accountID: String)
+}
+
 class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -16,7 +20,7 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
     
     var matchToShow = Int()
     
-    var delegate : RegistrationDelegate?
+    var delegate : UserSearchDelegate?
     
     var regSearchString : String?
     

@@ -11,39 +11,40 @@ import TextFieldEffects
 import SCLAlertView
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UserSearchDelegate {
 
+    //MARK: Variables
+    
     @IBOutlet weak var passwordTextField: MadokaTextField!
     @IBOutlet weak var usernameTextField: MadokaTextField!
+    
+    var searchString : String?
    
-    @IBAction func signupButton(_ sender: UIButton) {
-        AppService.sharedInstance.username = usernameTextField.text!
-        AppService.sharedInstance.password = passwordTextField.text!
-    }
-    @IBAction func loginButton(_ sender: UIButton) {
-       loginPressed()
-        
-    }
-    @IBAction func guestButton(_ sender: UIButton) {
-        searchPopUp()
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var guestId : Int?
+    
+    //MARK: viewDid
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if guestId != nil {
+            self.performSegue(withIdentifier: "guestSegue", sender: nil)
+        }
     }
     
+    //MARK: Login Methods
     
     func loginPressed() {
         let username = self.usernameTextField.text
         let password = self.passwordTextField.text
         
-        if(((username?.characters.count)!<4) || ((password?.characters.count)!<4)) {
+        if (((username?.characters.count)! < 4) || ((password?.characters.count)! < 4)) {
+            
             let alert = UIAlertController(title: "Invalid!",
                                           message:"Email and Password must be longer than 6 charachters",
                                           preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
-            self.present(alert, animated: true){}
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            
+            self.present(alert, animated: true, completion: nil)
             
         } else {
         
@@ -56,7 +57,8 @@ class LoginViewController: UIViewController {
                     UserDefaults.standard.synchronize()
                     
                     //call login func
-                    let appDelegate : AppDelegate = UIApplication.shared.delegate as!AppDelegate
+                    let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    
                     appDelegate.login()
                     
                 } else {
@@ -64,45 +66,72 @@ class LoginViewController: UIViewController {
                     
                     alert = UIAlertController(title: "Login Failed", message:"Unable to login, either email or password is incorrect. Have you signed up for a DotaMate account?", preferredStyle: .alert)
                     
-                    alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
-                    self.present(alert, animated: true){}
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    
+                    self.present(alert, animated: true, completion: nil)
                 }
                 
             })
-            
         }
     }
     
 
-    func searchPopUp(){
-        let appearance = SCLAlertView.SCLAppearance(
-        kTitleFont: UIFont(name: "AvenirNext-Regular", size: 20)!,
-        kTextFont: UIFont(name: "AvenirNext-Regular", size: 14)!,
-        kButtonFont: UIFont(name: "AvenirNext-Bold", size: 14)!,
-        showCloseButton: true
-    )
+    func searchPopUp() {
     
-    let alertView = SCLAlertView(appearance: appearance)
-    let text = alertView.addTextField("Dota2 name")
-    text.spellCheckingType = .no
-    text.autocorrectionType = .no
-    alertView.addButton("Search"){
-    AppService.sharedInstance.searchName = text.text!
-    self.search(input: text.text!)
-    
-    }
-    alertView.showSuccess("Search your SteamID",
-                          subTitle: "Please enter your Profile name or Steam64ID",
-                          colorStyle: 0x982D1D, colorTextButton: 0xFFFFFF)
-  
-    }
-    
-    func search(input: String){
+        let alertView = SCLAlertView(appearance: AlertHelper.loginSearchAppearance())
         
+        let username = alertView.addTextField("Dota2 name")
+        username.spellCheckingType = .no
+        username.autocorrectionType = .no
+        
+        alertView.addButton("Search") {
+            self.searchString = username.text
+            self.performSegue(withIdentifier: "userSearchSegue", sender: nil)
+        }
+        
+        alertView.showSuccess("Search your SteamID",
+                              subTitle: "Please enter your Profile name or Steam64ID",
+                              colorStyle: 0x982D1D, colorTextButton: 0xFFFFFF)
+      
+    }
     
+    func recieveAccountId(_ accountID: String) {
+        print(accountID)
+        guestId = accountID.steam64to32Int()
+    }
     
+    //MARK: prepareForSegue
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "userSearchSegue" {
+            
+            let vc = segue.destination as! UserSearchTableViewController
+            
+            vc.delegate = self
+            vc.regSearchString = searchString
+            
+        } else if segue.identifier == "guestSegue" {
+            let vc = segue.destination as! DotaMatchViewController
+            
+            vc.guestId = guestId
+        }
+        
+    }
     
+    //MARK: IBOutlets
+    
+    @IBAction func signupButton(_ sender: UIButton) {
+        AppService.sharedInstance.username = usernameTextField.text!
+        AppService.sharedInstance.password = passwordTextField.text!
+    }
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+        loginPressed()
+    }
+    
+    @IBAction func guestButton(_ sender: UIButton) {
+        searchPopUp()
     }
     
 }

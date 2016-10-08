@@ -18,17 +18,40 @@ class AppService: NSObject {
     
     var heroes = [Int:DMHeroes]()
     
-//<<<<<<< Updated upstream
+    var currentAccount : DMAccount?
+    
+    
+    //<<<<<<< Updated upstream
     var steamId = Int()
     var username = String()
     var password = String()
     var searchName = String()
     
-
-    
     func setup() {
         api.getItems()
         api.downloadHeroesFromAPI()
+    }
+    
+    func setAccountFor(steamId: Int) {
+        if currentAccount == nil {
+            currentAccount = DMAccount()
+        }
+        
+        api.getPlayerProfile(steamId) { profile, error in
+            if error != nil {
+                //explode
+            }
+            
+            self.currentAccount?.profile = profile
+        }
+        
+        api.getRecentMatches(steamId, limit: ApiConstatns.defaultApiLimit) { matches, error in
+            if error != nil {
+                //explode
+            }
+            
+            self.currentAccount?.recentGames = matches
+        }
     }
     
     func getSearchResults(_ searchString : String, success: @escaping (_ result: [ApiUser]?) -> Void, failure: (_ result: NSError?) -> Void) {
@@ -87,10 +110,5 @@ class AppService: NSObject {
     func getImage(_ url: String, imageView: UIImageView) {
         api.getImage(url, imageView: imageView)
     }
-    
-    
-    
-  
 
-    
 }

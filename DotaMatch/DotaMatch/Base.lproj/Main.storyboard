@@ -19,9 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0a-sO-cK6">
-                                <frame key="frameInset" minX="16" minY="20" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t0a-sO-cK6">
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
@@ -29,9 +27,7 @@
                                     <action selector="searchButtonPressed:" destination="u02-zJ-0Dv" eventType="primaryActionTriggered" id="OuF-JF-h0q"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-nH-zIy">
-                                <frame key="frameInset" minY="58" width="375" height="609"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Re6-nH-zIy">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userSearchCell" id="y5Q-BU-SUD" customClass="UserSearchTableViewCell" customModule="DotaMatch" customModuleProvider="target">
@@ -67,6 +63,16 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BQX-Qg-hGG" firstAttribute="top" secondItem="Re6-nH-zIy" secondAttribute="bottom" id="ICj-0E-BgQ"/>
+                            <constraint firstItem="t0a-sO-cK6" firstAttribute="leading" secondItem="LBc-yo-IP1" secondAttribute="leadingMargin" id="IEj-Qp-KUr"/>
+                            <constraint firstItem="Re6-nH-zIy" firstAttribute="leading" secondItem="LBc-yo-IP1" secondAttribute="leading" id="LKw-IT-Mhg"/>
+                            <constraint firstItem="Re6-nH-zIy" firstAttribute="top" secondItem="t0a-sO-cK6" secondAttribute="bottom" constant="8" id="T4J-Ug-nwd"/>
+                            <constraint firstItem="Re6-nH-zIy" firstAttribute="top" secondItem="t0a-sO-cK6" secondAttribute="bottom" constant="8" id="aN4-T9-Mqt"/>
+                            <constraint firstItem="t0a-sO-cK6" firstAttribute="top" secondItem="gIW-nA-L3c" secondAttribute="bottom" id="nnc-jJ-2oA"/>
+                            <constraint firstAttribute="trailing" secondItem="Re6-nH-zIy" secondAttribute="trailing" id="vG0-Ie-wKg"/>
+                            <constraint firstItem="t0a-sO-cK6" firstAttribute="trailing" secondItem="LBc-yo-IP1" secondAttribute="trailingMargin" id="xFb-7N-3og"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="searchTextField" destination="t0a-sO-cK6" id="Zrr-p3-ZTY"/>
@@ -204,6 +210,8 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Epv-dn-DzB" id="eCU-qK-nvA"/>
                         <outlet property="usernameTextField" destination="yLj-FH-gJv" id="qlj-kx-xAP"/>
+                        <segue destination="u02-zJ-0Dv" kind="show" identifier="userSearchSegue" id="6ub-Jr-jZC"/>
+                        <segue destination="4RD-Di-qj4" kind="show" identifier="guestSegue" id="7Ad-TG-b6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oGs-gD-9zb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,7 +338,7 @@
         <!--TabBar-->
         <scene sceneID="ibj-20-FPt">
             <objects>
-                <tabBarController storyboardIdentifier="TabBar" title="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="4RD-Di-qj4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBar" title="TabBar" automaticallyAdjustsScrollViewInsets="NO" id="4RD-Di-qj4" customClass="DotaMatchViewController" customModule="DotaMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Mf3-6D-Esf">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -381,4 +389,8 @@
     <resources>
         <image name="DotaMatchIcon" width="513" height="512"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6ub-Jr-jZC"/>
+        <segue reference="7Ad-TG-b6n"/>
+    </inferredMetricsTieBreakers>
 </document>

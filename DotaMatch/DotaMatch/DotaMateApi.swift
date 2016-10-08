@@ -17,7 +17,7 @@ class DotaMateApi: NSObject {
     //Bools
     var userSearchInProgress = false
     
-    func getRequest(_ url : String, pathParams : [String:String]?=nil, queryParams : [String:AnyObject]?=nil, completionHandler: @escaping (Any?, NSError?) -> ()) {
+    func getRequest(_ url : String, pathParams : [String:String]?=nil, queryParams : [String:Any]?=nil, completionHandler: @escaping (Any?, NSError?) -> ()) {
         
         var finalUrl = baseUrl
         
@@ -132,12 +132,46 @@ class DotaMateApi: NSObject {
         }
     }
     
-    func getRecentMatches(_ accountId: Int, completionHandler: @escaping ([DMRecentMatch]?, NSError?) -> ()) {
+    func getRecentMatches(_ accountId: Int, limit: Int?=nil, offset:Int?=nil, didWin: Bool?=nil, patch: Int?=nil, heroId: Int?=nil, isRadiant: Bool?=nil,  completionHandler: @escaping ([DMRecentMatch]?, NSError?) -> ()) {
         let url = DotaMateApiResources.Resource.ResourcePlayerMatches.rawValue
         
         let pathParams = ["accountId": "\(accountId)"]
         
-        getRequest(url, pathParams: pathParams) { responseObject, error in
+        var queryParams = [String:String]()
+        
+        if let limit = limit {
+            queryParams.updateValue("\(limit)", forKey: "limit")
+        }
+        
+        if let offset = offset {
+            queryParams.updateValue("\(offset)", forKey: "offset")
+        }
+        
+        if let didWin = didWin {
+            if didWin {
+                queryParams.updateValue("1", forKey: "didWin")
+            } else {
+                queryParams.updateValue("0", forKey: "didWin")
+            }
+        }
+        
+        if let patch = patch {
+            queryParams.updateValue("\(patch)", forKey: "patch")
+        }
+        
+        if let heroId = heroId {
+            queryParams.updateValue("\(heroId)", forKey: "heroId")
+        }
+        
+        if let isRadiant = isRadiant {
+            if isRadiant {
+                queryParams.updateValue("1", forKey: "isRadiant")
+            } else {
+                queryParams.updateValue("0", forKey: "isRadiant")
+            }
+        }
+        
+        getRequest(url, pathParams: pathParams, queryParams: queryParams) { responseObject, error in
             
             let response = responseObject! as? [AnyObject]
             
