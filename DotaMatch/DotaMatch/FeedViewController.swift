@@ -13,7 +13,7 @@ class FeedViewController: DotaMatchBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(self.dotaMatchTabBar!.guestId!.toString())
+        print(self.dotaMatchTabBar!.guestId?.toString())
 
         // Do any additional setup after loading the view.
     }

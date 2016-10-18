@@ -15,21 +15,13 @@ class DotaMatchViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let id = guestId {
-            AppService.sharedInstance.setAccountFor(steamId: id)
+        if AppService.shared.currentAccount == nil {
+            if let id = guestId {
+                AppService.shared.setAccountFor(steamId: id)
+            }
         }
         
         // Do any additional setup after loading the view.
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

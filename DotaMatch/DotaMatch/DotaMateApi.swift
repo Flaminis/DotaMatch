@@ -132,6 +132,80 @@ class DotaMateApi: NSObject {
         }
     }
     
+    func getWinLoss(_ accountId: Int, completionHandler: @escaping (DMWinLoss?, NSError?) -> ()) {
+        let url = DotaMateApiResources.Resource.ResourcePlayerWinLoss.rawValue
+        
+        let pathParams = ["accountId": "\(accountId)"]
+        
+        getRequest(url, pathParams: pathParams) { responseObject, error in
+            let json = JSON.init(responseObject!)
+            
+            let winLoss = DMWinLoss.init(json: json)
+            
+            completionHandler(winLoss, error)
+        }
+    }
+    
+    func getPlayerHeroes(_ accountId: Int, completionHandler: @escaping ([DMPlayerHeroes]?, NSError?) -> ()) {
+        let url = DotaMateApiResources.Resource.ResourcePlayerHeroes.rawValue
+        
+        let pathParams = ["accountId": "\(accountId)"]
+        
+        getRequest(url, pathParams: pathParams) { responseObject, error in
+            let response = responseObject! as? [AnyObject]
+            
+            let count = response!.count
+            
+            var heroes = [DMPlayerHeroes]()
+            
+            var x = 0
+            
+            repeat {
+                
+                let json = JSON.init(response![x])
+                
+                let hero = DMPlayerHeroes.init(json: json)
+                
+                heroes.append(hero)
+                
+                x += 1
+                
+            } while x < count
+            
+            completionHandler(heroes, error)
+        }
+    }
+    
+    func getPlayerPeers(_ accountId: Int, completionHandler: @escaping ([DMPeers]?, NSError?) -> ()) {
+        let url = DotaMateApiResources.Resource.ResourcePlayerPeers.rawValue
+        
+        let pathParams = ["accountId": "\(accountId)"]
+        
+        getRequest(url, pathParams: pathParams) { responseObject, error in
+            let response = responseObject! as? [AnyObject]
+            
+            let count = response!.count
+            
+            var peers = [DMPeers]()
+            
+            var x = 0
+            
+            repeat {
+                
+                let json = JSON.init(response![x])
+                
+                let peer = DMPeers.init(json: json)
+                
+                peers.append(peer)
+                
+                x += 1
+                
+            } while x < count
+            
+            completionHandler(peers, error)
+        }
+    }
+    
     func getRecentMatches(_ accountId: Int, limit: Int?=nil, offset:Int?=nil, didWin: Bool?=nil, patch: Int?=nil, heroId: Int?=nil, isRadiant: Bool?=nil,  completionHandler: @escaping ([DMRecentMatch]?, NSError?) -> ()) {
         let url = DotaMateApiResources.Resource.ResourcePlayerMatches.rawValue
         
@@ -208,7 +282,7 @@ class DotaMateApi: NSObject {
             
             let result = DMResult.init(json: json["result"])
             
-            AppService.sharedInstance.items.removeAll()
+            AppService.shared.items.removeAll()
             
             for item in result.items! {
                 
@@ -218,7 +292,7 @@ class DotaMateApi: NSObject {
                 
                 item.imageUrl = url
                 
-                AppService.sharedInstance.items.updateValue(item, forKey: item.internalIdentifier!)
+                AppService.shared.items.updateValue(item, forKey: item.internalIdentifier!)
                 
             }
             
@@ -244,7 +318,7 @@ class DotaMateApi: NSObject {
                 hero.smallUrl = "http://media.steampowered.com/apps/dota2/images/heroes/\(imageHeroName)_sb.png"
                 hero.portraitUrl = "http://cdn.dota2.com/apps/dota2/images/heroes/\(imageHeroName)_vert.jpg"
                 
-                AppService.sharedInstance.heroes.updateValue(hero, forKey: hero.internalIdentifier!)
+                AppService.shared.heroes.updateValue(hero, forKey: hero.internalIdentifier!)
             }
             
         }

@@ -10,7 +10,7 @@ import UIKit
 
 class AppService: NSObject {
     
-    static let sharedInstance = AppService()
+    static let shared = AppService()
     
     let api = DotaMateApi()
     
@@ -18,8 +18,7 @@ class AppService: NSObject {
     
     var heroes = [Int:DMHeroes]()
     
-    var currentAccount : DMAccount?
-    
+    var currentAccount : Profile?
     
     //<<<<<<< Updated upstream
     var steamId = Int()
@@ -34,7 +33,7 @@ class AppService: NSObject {
     
     func setAccountFor(steamId: Int) {
         if currentAccount == nil {
-            currentAccount = DMAccount()
+            currentAccount = Profile()
         }
         
         api.getPlayerProfile(steamId) { profile, error in
@@ -42,7 +41,7 @@ class AppService: NSObject {
                 //explode
             }
             
-            self.currentAccount?.profile = profile
+            self.currentAccount?.info = profile
         }
         
         api.getRecentMatches(steamId, limit: ApiConstatns.defaultApiLimit) { matches, error in
@@ -50,8 +49,38 @@ class AppService: NSObject {
                 //explode
             }
             
-            self.currentAccount?.recentGames = matches
+            self.currentAccount?.recentMatches = matches
         }
+        
+        api.getPlayerHeroes(steamId) { heroes, error in
+            
+            if error != nil {
+                //explode
+            }
+            
+            self.currentAccount?.heroes = heroes
+        }
+        
+        api.getPlayerPeers(steamId) { peers, error in
+            
+            if error != nil {
+                //explode
+            }
+            
+            self.currentAccount?.peers = peers
+            
+        }
+        
+        api.getWinLoss(steamId) { winLoss, error in
+            
+            if error != nil {
+                //explode
+            }
+            
+            self.currentAccount?.winLoss = winLoss
+        }
+        
+        
     }
     
     func getSearchResults(_ searchString : String, success: @escaping (_ result: [ApiUser]?) -> Void, failure: (_ result: NSError?) -> Void) {
@@ -110,5 +139,5 @@ class AppService: NSObject {
     func getImage(_ url: String, imageView: UIImageView) {
         api.getImage(url, imageView: imageView)
     }
-
+    
 }

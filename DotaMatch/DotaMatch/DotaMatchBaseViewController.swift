@@ -14,10 +14,10 @@ class DotaMatchBaseViewController: UIViewController {
         get {return self.tabBarController as? DotaMatchViewController}
     }
     
-    var currentAccount : DMAccount?
+    var currentAccount : Profile?
     
     override func viewDidLoad() {
-        currentAccount = AppService.sharedInstance.currentAccount
+        currentAccount = AppService.shared.currentAccount
     }
     
 }

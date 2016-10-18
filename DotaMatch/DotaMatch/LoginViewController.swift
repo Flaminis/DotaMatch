@@ -122,8 +122,8 @@ class LoginViewController: UIViewController, UserSearchDelegate {
     //MARK: IBOutlets
     
     @IBAction func signupButton(_ sender: UIButton) {
-        AppService.sharedInstance.username = usernameTextField.text!
-        AppService.sharedInstance.password = passwordTextField.text!
+        AppService.shared.username = usernameTextField.text!
+        AppService.shared.password = passwordTextField.text!
     }
     
     @IBAction func loginButton(_ sender: UIButton) {

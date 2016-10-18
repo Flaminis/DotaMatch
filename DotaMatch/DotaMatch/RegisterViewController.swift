@@ -43,8 +43,8 @@ class RegisterViewController: UIViewController, UserSearchDelegate {
             //send data to server with related columns
             let email = emailTextField.text
             let newUser = User()
-            newUser.username = AppService.sharedInstance.username
-            newUser.password = AppService.sharedInstance.password
+            newUser.username = AppService.shared.username
+            newUser.password = AppService.shared.password
             newUser.email = email?.lowercased()
             newUser.SteamID = steamTextField!.text!.steam64to32()
             

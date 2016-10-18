@@ -48,7 +48,7 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
         
         users.removeAll()
     
-        AppService.sharedInstance.getSearchResults(searchString, success: { (result) in
+        AppService.shared.getSearchResults(searchString, success: { (result) in
             
             self.users = result!
             
@@ -89,7 +89,7 @@ class UserSearchTableViewController: UIViewController, UITableViewDelegate, UITa
         
         cell.avatarImageView.image = nil
         
-        AppService.sharedInstance.getImage(user.avatar!, imageView: cell.avatarImageView)
+        AppService.shared.getImage(user.avatar!, imageView: cell.avatarImageView)
         
         return cell
     }

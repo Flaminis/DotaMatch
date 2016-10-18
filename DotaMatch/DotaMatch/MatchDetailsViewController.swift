@@ -48,7 +48,7 @@ class MatchDetailsViewController: UIViewController, UITableViewDelegate, UITable
         
         tableView.register(nib, forCellReuseIdentifier: "playerCell")
         
-        AppService.sharedInstance.getMatch(matchId!, success: { (result) in
+        AppService.shared.getMatch(matchId!, success: { (result) in
             
             let match = result!
             
@@ -69,7 +69,7 @@ class MatchDetailsViewController: UIViewController, UITableViewDelegate, UITable
             
             if player.accountId != nil {
             
-                AppService.sharedInstance.getPlayerProfile(player.accountId!, success: { result in
+                AppService.shared.getPlayerProfile(player.accountId!, success: { result in
                     
                     count += 1
                     self.players.updateValue(result!, forKey: player.accountId!)
@@ -153,37 +153,37 @@ class MatchDetailsViewController: UIViewController, UITableViewDelegate, UITable
         cell.itemView.backgroundColor = .clear
         
         if item0 > 0 {
-            cell.item1.kf.setImage(with: URL(string: AppService.sharedInstance.items[item0!]!.imageUrl!))
+            cell.item1.kf.setImage(with: URL(string: AppService.shared.items[item0!]!.imageUrl!))
         } else {
             cell.item1.image = nil
         }
         if item1 > 0 {
-            cell.item2.kf.setImage(with: URL(string: AppService.sharedInstance.items[item1!]!.imageUrl!))
+            cell.item2.kf.setImage(with: URL(string: AppService.shared.items[item1!]!.imageUrl!))
         } else {
             cell.item2.image = nil
         }
         if item2 > 0 {
-            cell.item3.kf.setImage(with: URL(string: AppService.sharedInstance.items[item2!]!.imageUrl!))
+            cell.item3.kf.setImage(with: URL(string: AppService.shared.items[item2!]!.imageUrl!))
         } else {
             cell.item3.image = nil
         }
         if item3 > 0 {
-            cell.item4.kf.setImage(with: URL(string: AppService.sharedInstance.items[item3!]!.imageUrl!))
+            cell.item4.kf.setImage(with: URL(string: AppService.shared.items[item3!]!.imageUrl!))
         } else {
             cell.item4.image = nil
         }
         if item4 > 0 {
-            cell.item5.kf.setImage(with: URL(string: AppService.sharedInstance.items[item4!]!.imageUrl!))
+            cell.item5.kf.setImage(with: URL(string: AppService.shared.items[item4!]!.imageUrl!))
         } else {
             cell.item5.image = nil
         }
         if item5 > 0 {
-            cell.item6.kf.setImage(with: URL(string: AppService.sharedInstance.items[item5!]!.imageUrl!))
+            cell.item6.kf.setImage(with: URL(string: AppService.shared.items[item5!]!.imageUrl!))
         } else {
             cell.item6.image = nil
         }
         
-        let hero = AppService.sharedInstance.heroes[(player?.heroId!)!]
+        let hero = AppService.shared.heroes[(player?.heroId!)!]
         
         cell.heroBackground.kf.setImage(with:URL(string: (hero?.largeUrl!)!))
         cell.heroBackground.alpha = 0.25
@@ -194,15 +194,5 @@ class MatchDetailsViewController: UIViewController, UITableViewDelegate, UITable
         
         return cell
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
