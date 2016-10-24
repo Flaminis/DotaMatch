@@ -18,6 +18,8 @@ class DotaMatchBaseViewController: UIViewController {
     
     override func viewDidLoad() {
         currentAccount = AppService.shared.currentAccount
+   
+    
     }
     
 }
