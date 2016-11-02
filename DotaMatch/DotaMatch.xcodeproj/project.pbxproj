@@ -102,6 +102,7 @@
 		C7A27B671DA59ED600939333 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B651DA59ED600939333 /* Search.storyboard */; };
 		C7A27B691DA59EE600939333 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A27B681DA59EE600939333 /* Profile.storyboard */; };
 		C7A27B6B1DA5AE1700939333 /* UIImageViewURLExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */; };
+		C7D982B91DBEA1ED007A2450 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D982B81DBEA1ED007A2450 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -203,6 +204,7 @@
 		C7A27B661DA59ED600939333 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		C7A27B681DA59EE600939333 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewURLExtension.swift; sourceTree = "<group>"; };
+		C7D982B81DBEA1ED007A2450 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DB4736853DAF0368BBCF0AA0 /* Pods-DotaMatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DotaMatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DotaMatch/Pods-DotaMatch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 				C7A27B6A1DA5AE1700939333 /* UIImageViewURLExtension.swift */,
 				C76BAF6B1DA603BE0015597C /* UIInt64+32Extensions.swift */,
 				27D5490F1DA43DB2008D1912 /* ViewController.swift */,
+				C7D982B81DBEA1ED007A2450 /* Utils.swift */,
 			);
 			path = DotaMatch;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				C785F0AB1DA44B77007A8E34 /* DMTeamfights.swift in Sources */,
 				C785F0E31DA44B77007A8E34 /* DMAdditionalUnits.swift in Sources */,
 				C76BAF701DA893E60015597C /* DotaMatchViewController.swift in Sources */,
+				C7D982B91DBEA1ED007A2450 /* Utils.swift in Sources */,
 				C785F0C91DA44B77007A8E34 /* DMKilledBy.swift in Sources */,
 				C785F0CB1DA44B77007A8E34 /* DMItemWin.swift in Sources */,
 				C785F0BD1DA44B77007A8E34 /* DMMyWordCounts.swift in Sources */,

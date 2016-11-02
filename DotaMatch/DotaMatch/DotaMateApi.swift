@@ -13,6 +13,7 @@ import SwiftyJSON
 class DotaMateApi: NSObject {
         
     let baseUrl = "https://api.opendota.com/api"
+    let steamApiKey = "A041063D0F9386FD666F26E04598C9D0"
     
     //Bools
     var userSearchInProgress = false
@@ -302,7 +303,7 @@ class DotaMateApi: NSObject {
     
     func downloadHeroesFromAPI() {
         
-        let queryParams = ["language":"en-us", "key" : "A041063D0F9386FD666F26E04598C9D0"]
+        let queryParams = ["language" : "en-us", "key" : steamApiKey]
         
         Alamofire.request("http://api.steampowered.com/IEconDOTA2_570/GetHeroes/v0001/", method: .get, parameters: queryParams,encoding: URLEncoding.default).validate().responseJSON(){ response in
             

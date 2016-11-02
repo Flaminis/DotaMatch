@@ -27,6 +27,10 @@ class RegisterViewController: UIViewController, UserSearchDelegate {
     
     func signUp() {
         
+        if emailTextField.text!.characters.count < 4 {
+            
+        }
+        
         if (((emailTextField?.text!.characters.count)! < 4) || ((steamTextField?.text!.characters.count)! < 9)) {
             
             let alert = UIAlertController(title: "Invalid!", message:"Email or SteamId is wrong", preferredStyle: .alert)
@@ -38,8 +42,6 @@ class RegisterViewController: UIViewController, UserSearchDelegate {
         } else {
             
             //spin it babe
-            
-            
             //send data to server with related columns
             let email = emailTextField.text
             let newUser = User()

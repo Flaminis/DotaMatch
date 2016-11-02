@@ -26,3 +26,9 @@ struct ParseSettings {
     static let clientKey = "abc123"
     static let server = "http://95.85.22.29/parse"
 }
+
+class Constants : NSObject {
+    
+    static let profileMatchCell = "ProfileMatchCell"
+    
+}

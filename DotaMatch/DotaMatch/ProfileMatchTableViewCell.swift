@@ -31,5 +31,13 @@ class ProfileMatchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setImageForPlayerSlot(_ slot : Int) {
+        if slot < 4 {
+            self.radianOrDireImage.image = #imageLiteral(resourceName: "radiant")
+        } else {
+            self.radianOrDireImage.image = #imageLiteral(resourceName: "dire")
+        }
+    }
 
 }
